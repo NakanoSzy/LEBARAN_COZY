@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebaran Cozy</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div id="loading-overlay">
+        <div class="pixel-loader">LOADING...</div>
+    </div>
+
+    <main class="main-con vtainer">
+
+        <header class="pixel-header">
+            <h1 class="logo-text">Lebaran Cozy</h1>
+            <button id="btn-music" class="pixel-btn-icon">
+                <span id="music-status">🔈</span>
+            </button>
+        </header>
+
+        <section class="diorama-section">
+            <div class="room-background">
+                <div class="character-avatar"></div>
+                
+                <div class="cat-pixel"></div>
+
+                <div class="table-items"></div>
+            </div>
+        </section>
+
+        <section class="ucapan-section pixel-box">
+            <h2>SELAMAT HARI RAYA IDUL FITRI</h2>
+            <p>Minal 'Aidin wal-Fa'izin,<br>Maaf Lahir Batin ya Buat Semua Salah Yang Disengaja Maupun Yang Nggak di Sengaja. <br> Manifesting Setelah Lebaran Ini Kita Semua Makin Sukses, Makin Glow Up, dan Dilancarkan Segala Urusan Kedepannya.<br>Selamat Kumpul Bareng Keluarga, dan Jangan Lupa Self-Care di Hari Kemenangan Ini.<br>Saya Mengucapkan Terimakasih Buat Temen" yang udah nyempetin waktunya buat mampir di website ini :D</p>
+        </section>
+
+        <section class="game-section">
+            <h3>Klik Ketupat Keberuntunganmu!</h3>
+            <div class="ketupat-container">
+<div class="ketupat-item" onclick="bukaKetupat(this, 1)" onmousedown="playClickSound()"></div>
+                <div class="ketupat-item" onclick="bukaKetupat(this, 2)" onmousedown="playClickSound()"></div>
+                <div class="ketupat-item" onclick="bukaKetupat(this, 3)" onmousedown="playClickSound()"></div>
+            </div>
+            <div id="game-dialog" class="pixel-dialog hidden">
+                <p id="dialog-text">...</p>
+                <button class="pixel-btn-sm" onclick="tutupDialog()">OK</button>
+            </div>
+        </section>
+
+        <section class="thr-section pixel-box-dark">
+            <h1>Kotak THR</h1>
+            <p>Kalau ada rezeki lebih boleh kali bagi THR nya...hehee.</p>
+            
+            <div class="thr-actions">
+                <button class="pixel-btn color-qris" onclick="showQris()">Kirim via QRIS</button>
+                <button class="pixel-btn color-rek" onclick="copyRekening()">Salin No. Rek</button>
+                <button class="pixel-btn color-doa" onclick="kirimDoa()">Kirim Doa Saja</button>
+            </div>
+
+            <div id="qris-container" class="hidden pixel-dialog">
+                <img src="assets/images/qris.jpeg" alt="QRIS Code" class="pixelated-img">
+                <button class="pixel-btn-sm" onclick="hideQris()">Tutup</button>
+            </div>
+        </section>
+
+    </main>
+
+    <audio id="bgm" loop autoplay>
+        <source src="assets/audio/soundback.mpeg" type="audio/mpeg">
+    </audio>
+
+    <audio id="clickSound" preload="auto">
+        <source src="assets/audio/click.mpeg" type="audio/mpeg">
+    </audio>
+
+    <script src="script.js"></script>
+</body>
+</html> 
